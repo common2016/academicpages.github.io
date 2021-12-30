@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "zn-CN"
-title                    : "陈普 / CP的个人网站"
+title                    : "Chen Pu / CP的个人网站"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
@@ -80,8 +80,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "陈普"
-  avatar           : "cat.jpg"
+  name             : "Chen Pu"
+  avatar           : "201911.png"
   bio              : "赵客缦胡缨，吴钩霜雪明"
   location         : "江西 南昌"
   employer         :
