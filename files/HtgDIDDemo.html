@@ -1499,7 +1499,7 @@ y_{it}=\beta_0+\sum_{r=q}^T\lambda_r\cdot d_{ir}+\sum_{s=2}^T\theta_s\cdot fs_t+
     &amp;\sum_{r=q}^T\sum_{s=r}^T\tau_{rs}(w_{it}\cdot d_{ir}\cdot fs_t)+\sum_{r=q}^T\sum_{s=r}^T(w_{it}\cdot d_{ir}\cdot fs_t\cdot \dot{\mathbf{x}}_{ir})\rho_{rs}+u_{it}
 \end{aligned}\tag{*}\label{eq1}
 \]</span> 注意自变量的编排。先是<span class="math inline">\(d_{ir}\)</span>和<span class="math inline">\(\mathbf{x}_i\)</span>，然后是它们的交互，再加入<span class="math inline">\(fs_t\)</span>，再和<span class="math inline">\(\mathbf{x}_i\)</span>交互，然后加入我们感兴趣的<span class="math inline">\(w_{it}\cdot d_{ir}\cdot fs_t\)</span>(或者说<span class="math inline">\(d_{ir}\cdot fs_t\)</span>)，最后再加入与<span class="math inline">\(\mathbf{x}_i\)</span>的交互。注意最后这个交互用的是<span class="math inline">\(\dot{x}_{ir}=x_i-N_i^{-1}\sum_{h=1}^Nd_{hr}\mathbf{x}_h\)</span>，是一个基于干预时机的组内去均值，这么做的原因主要是方便<span class="math inline">\(\tau_{rs}\)</span>的经济含义的解释。否则，<span class="math inline">\(\tau_{rs}\)</span>解释为在<span class="math inline">\(\mathbf{x}_i\)</span>取0时的ATT，通过这样的去均值处理，<span class="math inline">\(\tau_{rs}\)</span>可以解释为<span class="math inline">\(\mathbf{x}_i\)</span>在以干预分组的均值处时的ATT。</p>
-<p>同时，<span class="math inline">\(fs_t,fs_t\cdot \mathbf{x}_i\)</span>把<span class="math inline">\(t&lt;q\)</span>的项去掉也不会影响<span class="math inline">\(\rho_{rs}\)</span>的估计。</p>
+<p>同时，<span class="math inline">\(fs_t,fs_t\cdot \mathbf{x}_i\)</span>把<span class="math inline">\(t&lt;q\)</span>的项去掉也不会影响<span class="math inline">\(\tau_{rs}\)</span>的估计。</p>
 <h3 id="共同趋势检验">1.3 共同趋势检验</h3>
 <p>无协变量时检验方程可以写为， <span class="math display">\[
 y_{it}=\eta+\sum_{r=q}^T\lambda_r\cdot d_{ir}+\sum_{s=2}^T\theta_s\cdot fs_t+\sum_{r=q}^T\sum_{s=2}^{r-1}\omega_{rs}(d_{ir}\cdot fs_t)+\sum_{r=q}^T\sum_{s=r}^T\delta_{rs}(d_{ir}\cdot fs_t)+u_{it} 
