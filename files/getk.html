@@ -93,8 +93,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-09-05" />
-  <meta property="article:created" itemprop="dateCreated" content="2022-09-05" />
+  <meta property="article:published" itemprop="datePublished" content="2022-09-07" />
+  <meta property="article:created" itemprop="dateCreated" content="2022-09-07" />
   <meta name="article:author" content="陈普" />
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -112,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["`getk`函数说明文档"]},{"type":"character","attributes":{},"value":["这是对Heer and Maussner (2009, Chapter 9)中9.3节代码的`getk`函数的说明。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["陈普"]},{"type":"character","attributes":{},"value":["https://common2016.github.io/chenpu.github.io/"]},{"type":"character","attributes":{},"value":["华东交通大学"]},{"type":"character","attributes":{},"value":["https://example.com/spacelysprokets"]}]}]},{"type":"character","attributes":{},"value":["2022-09-05"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["`getk`函数说明文档"]},{"type":"character","attributes":{},"value":["这是对Heer and Maussner (2009, Chapter 9)中9.3节代码的`getk`函数的说明。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["陈普"]},{"type":"character","attributes":{},"value":["https://common2016.github.io/chenpu.github.io/"]},{"type":"character","attributes":{},"value":["华东交通大学"]},{"type":"character","attributes":{},"value":["https://example.com/spacelysprokets"]}]}]},{"type":"character","attributes":{},"value":["2022-09-07"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2474,7 +2474,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"`getk`函数说明文档","description":"这是对Heer and Maussner (2009, Chapter 9)中9.3节代码的`getk`函数的说明。","authors":[{"author":"陈普","authorURL":"https://common2016.github.io/chenpu.github.io/","affiliation":"华东交通大学","affiliationURL":"https://example.com/spacelysprokets","orcidID":""}],"publishedDate":"2022-09-05T00:00:00.000+08:00","citationText":"陈普, 2022"}
+{"title":"`getk`函数说明文档","description":"这是对Heer and Maussner (2009, Chapter 9)中9.3节代码的`getk`函数的说明。","authors":[{"author":"陈普","authorURL":"https://common2016.github.io/chenpu.github.io/","affiliation":"华东交通大学","affiliationURL":"https://example.com/spacelysprokets","orcidID":""}],"publishedDate":"2022-09-07T00:00:00.000+08:00","citationText":"陈普, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2494,7 +2494,7 @@ distill-header .nav a {
 <div class="d-byline">
   陈普 <a href="https://common2016.github.io/chenpu.github.io/" class="uri">https://common2016.github.io/chenpu.github.io/</a> (华东交通大学)<a href="https://example.com/spacelysprokets" class="uri">https://example.com/spacelysprokets</a>
   
-<br />2022-09-05
+<br />2022-09-07
 </div>
 
 <div class="d-article">
@@ -2718,6 +2718,7 @@ e(2,j)\cdot
 <span class="co"># 开始getk的逻辑</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>,<span class="fl">0.5</span><span class="op">)</span>
 <span class="va">ns</span> <span class="op">&lt;-</span> <span class="fl">0.3</span> <span class="co"># 外生的劳动供给</span>
+<span class="va">zeta11</span> <span class="op">&lt;-</span> <span class="va">zeta10</span><span class="op">*</span><span class="va">ns</span>
 <span class="va">k</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>
 <span class="va">trs</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>
 
@@ -2730,11 +2731,11 @@ e(2,j)\cdot
 </div>
 </div>
 <p>为了发放养老金，必须要从工作期的劳动力中征税，税率<span class="math inline">\(\tau_b\)</span>与通常说的养老金替代率，即上交的养老金除以总工资比率，只要知道其中一个就能反算另一个。对于现收现付的养老金系统，居民在<span class="math inline">\(t\)</span>年可以获得的养老金可以写为， <span class="math display">\[
-b_t=\zeta\cdot (1-\tau_w-\tau_b)\cdot w_t\cdot \bar{l}
+b_t=\zeta\cdot (1-\tau_w-\tau_b)\cdot w_t
 \]</span> 其中<span class="math inline">\(\bar{l}\)</span>是平均劳动供给，<span class="math inline">\(\zeta\)</span>是养老金替代率，<span class="math inline">\(\tau_w,\tau_b\)</span>是工资税率和养老金税率。我们假设养老金是一次付清的，也就是这笔养老金要支付给<span class="math inline">\(t\)</span>年所有的退休人员。所以该式左边是平均一个退休人员获得的养老金，右边是平均一个工作人员贡献的养老金。写成养老金的总量形式为，</p>
 <p><span class="math display">\[
-\zeta\cdot (1-\tau_w-\tau_b)\cdot w_t\cdot
-\bar{l}=b_t=\frac{B_t}{n_{old}}\tag{3}\label{b1}
+\zeta\cdot (1-\tau_w-\tau_b)\cdot
+w_t=b_t=\frac{B_t}{n_{old}}\tag{3}\label{b1}
 \]</span></p>
 <p>其中<span class="math inline">\(n_{old}\)</span>是退休人员总数目。同时，按照<span class="math inline">\(\tau_b\)</span>的定义，均衡时养老金又可以写成，
 <span class="math display">\[
@@ -2742,12 +2743,11 @@ B_t=\tau_b\cdot w_t\cdot n_{young}\tag{4}\label{b2}
 \]</span></p>
 <p>其中<span class="math inline">\(n_{young}\)</span>是劳动供给的数目。基于式<span class="math inline">\(\ref{b1}\)</span>和式<span class="math inline">\(\ref{b2}\)</span>，消去<span class="math inline">\(B_t\)</span>，可以得到替代率<span class="math inline">\(\zeta\)</span>和<span class="math inline">\(\tau_b\)</span>之间的关系为，</p>
 <p><span class="math display">\[
-\tau_b=\frac{\zeta(1-\tau_w)\cdot\bar{l}\cdot
-n_{old}}{n_{young}+\zeta\cdot\bar{l}\cdot n_{old}}
+\tau_b=\frac{\zeta(1-\tau_w)\cdot n_{old}}{n_{young}+\zeta\cdot n_{old}}
 \]</span> 因此，由替代率可以反算出<span class="math inline">\(\tau_b\)</span>为，</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="va">taub</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fl">1</span><span class="op">-</span><span class="va">tauw0</span><span class="op">)</span><span class="op">*</span><span class="va">zeta10</span><span class="op">*</span><span class="va">ns</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/pkg/matlab/man/sum.html">sum</a></span><span class="op">(</span><span class="va">mass</span><span class="op">[</span><span class="va">rage</span><span class="op">:</span><span class="va">nage</span><span class="op">]</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="va">ls</span><span class="op">+</span><span class="va">zeta10</span><span class="op">*</span><span class="va">ns</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/pkg/matlab/man/sum.html">sum</a></span><span class="op">(</span><span class="va">mass</span><span class="op">[</span><span class="va">rage</span><span class="op">:</span><span class="va">nage</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="co"># 由替代率反算taub</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">taub</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fl">1</span><span class="op">-</span><span class="va">tauw0</span><span class="op">)</span><span class="op">*</span><span class="va">zeta11</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/pkg/matlab/man/sum.html">sum</a></span><span class="op">(</span><span class="va">mass</span><span class="op">[</span><span class="va">rage</span><span class="op">:</span><span class="va">nage</span><span class="op">]</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="va">ls</span><span class="op">+</span><span class="va">zeta11</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/pkg/matlab/man/sum.html">sum</a></span><span class="op">(</span><span class="va">mass</span><span class="op">[</span><span class="va">rage</span><span class="op">:</span><span class="va">nage</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="co"># 由替代率反算taub</span>
 <span class="va">taub</span>
 </code></pre>
 </div>
